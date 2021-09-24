@@ -6,13 +6,18 @@ let sanitizeHTML = require("sanitize-html")
 let app = express()
 let db
 
+let port = process.env.port
+if(port == null || port == ""){
+  port = 3000
+}
+
 app.use(express.static("public"))
 
-let connectionString = "mongodb+srv://todoAppUser:21062012Er@cluster0.wjbhw.mongodb.net/TodoApp?retryWrites=true&w=majority"
+let connectionString = "mongodb+srv://todoAppUser:0Xgzpp5awseEL5nK@cluster0.wjbhw.mongodb.net/TodoApp?retryWrites=true&w=majority"
 
 MongoClient.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, client) {
     db = client.db()
-    app.listen(3000)
+    app.listen(port)
 })
 
 app.use(express.json())
@@ -41,7 +46,7 @@ app.get("/", function (req, res) {
         </head>
         <body>
           <div class="container">
-            <h1 class="display-4 text-center py-1">To-Do Application</h1>
+            <h1 class="display-4 text-center py-1">Bugün Ne Yapacağız</h1>
             
             <div class="jumbotron p-3 shadow-sm">
               <form id="create-form" action="/create-item" method="POST">
