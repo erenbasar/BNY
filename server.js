@@ -41,7 +41,7 @@ app.get("/", function (req, res) {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Simple To-Do App</title>
+          <title>Ne Yapak/title>
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         </head>
         <body>
@@ -52,7 +52,7 @@ app.get("/", function (req, res) {
               <form id="create-form" action="/create-item" method="POST">
                 <div class="d-flex align-items-center">
                   <input id="create-field" name = "item" autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
-                  <button class="btn btn-primary">Add New Item</button>
+                  <button class="btn btn-primary">Yeni iş ekle</button>
                 </div>
               </form>
             </div>
